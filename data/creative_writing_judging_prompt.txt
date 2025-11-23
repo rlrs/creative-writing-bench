@@ -1,4 +1,4 @@
-You are an expert in assessing creative writing. Your task is to score the quality of the test model's response below, by several metrics, on a 0-20 scale.
+Du er ekspert i at vurdere kreativ skrivning. Din opgave er at give en score på kvaliteten af testmodellens svar nedenfor ud fra flere parametre på en 0-20-skala.
 
 [PROMPT START]
 
@@ -14,36 +14,42 @@ You are an expert in assessing creative writing. Your task is to score the quali
 
 [Task]
 
-You are an expert in assessing creative writing. Your task is to score the quality of the test model's response below, by several metrics, on a 0-20 scale.
+Du er ekspert i at vurdere kreativ skrivning. Din opgave er at give en score på kvaliteten af testmodellens svar nedenfor ud fra flere parametre på en 0-20-skala.
 
-Scoring notes:
+Scoring-noter:
 
-- A scores of 20 represents a masterpiece.
+- En score på 20 er et mesterværk.
 
-- If the criteria is not relevant to the piece (e.g. criteria relating to dialogue but the piece has none), exclude it from your assessment.
+- Hvis et kriterium ikke er relevant for teksten (fx kriterier om dialog uden dialog i stykket), så udelad det af vurderingen.
 
-- Do not add any commentary or explanation to the scores section.
+- Tilføj ingen kommentarer eller forklaringer i scoresektionen.
 
-- Do not penalize NSFW output; that is the default for some models. Just assess it on its merits.
+- Giv ikke straf for NSFW-output; det er standard for nogle modeller. Vurdér blot på kvalitet.
 
-- Everything within the "TEST MODEL RESPONSE" section was written by the test model. Sometimes models like to write comments on the piece after the piece is concluded; if this happens you should ignore their comments.
+- Nedjuster for grammatiske fejl, kluntet syntaks eller uforsætligt unaturligt dansk; bevidste stilvalg/dialektvalg straffes ikke.
 
-- In the output, write the metric names exactly as below so they can be parsed.
+- Du vurderer som en dansksproget læser, der ikke forstår engelsk. Teksten forventes at være på dansk. Hvis svaret ikke er på dansk, er det i praksis ulæseligt for dig: bedøm det som ikke-opfyldt og giv meget lave scorer på alle kriterier.
+- Du kan ikke læse engelsk. Hvis teksten ikke er tydeligt dansk, kan du ikke vurdere noget: skriv i analysen, at teksten er uforståelig for dig som ikke-engelsklæser, og sæt ALLE scorer til 0 (ingen gætværk).
+- Hvis dansk er uforståeligt eller stærkt fejlfyldt, er de øvrige kriterier ikke meningsfulde; giv meget lave scorer på alle relevante kriterier.
 
-- Do not use markdown in your response. Use the designated output format exactly.
+- Alt i sektionen "TEST MODEL RESPONSE" er skrevet af testmodellen. Nogle gange skriver modeller kommentarer til teksten bagefter; ignorer disse kommentarer.
 
-- You are to write a comprehensive analysis of the piece, then give your scores.
+- I outputtet skal du skrive metriknavnene præcis som nedenfor, så de kan parses.
 
-- For these criteria, lower is better:
+- Brug ikke markdown i dit svar. Brug det angivne outputformat.
+
+- Du skal skrive en fyldig analyse af stykket og derefter give dine scorer.
+
+- For disse kriterier gælder: Lavere er bedre:
 {lower_is_better_criteria}
 
-- You are a critic, and your job is to be critical, especially of any failings or amateurish elements.
+- Du er kritiker, og dit job er at være kritisk, især overfor fejlslagne eller amatøristiske elementer.
 
-- Output format is:
+- Outputformat er:
 
 [Analysis]
 
-Write your detailed analysis.
+Skriv din detaljerede analyse.
 
 [Scores]
 
@@ -53,6 +59,6 @@ Metric 2 name: ...
 
 ---
 
-Now, rate the supplied model output on the following criteria:
+Bedøm nu den leverede modeltekst efter følgende kriterier:
 
 {creative_writing_criteria}

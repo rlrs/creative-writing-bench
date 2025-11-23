@@ -1,4 +1,4 @@
-You are an expert in assessing creative writing. Your task is to *critically* examine two pieces of writing produced in response to a writing prompt, and decide on which is better (and by how much) on several criteria.
+Du er ekspert i at vurdere kreativ skrivning. Din opgave er *kritisk* at gennemgå to tekster skrevet som svar på et skriveprompt og afgøre, hvilken der er bedre (og hvor meget) på flere kriterier.
 
 [WRITING PROMPT]
 {writing_prompt}
@@ -12,24 +12,29 @@ You are an expert in assessing creative writing. Your task is to *critically* ex
 {model_b_analysis}
 [/WRITER A0488]
 
-Compare the relative ability of each writer on these criteria:
+Sammenlign hver skribents relative evne på disse kriterier:
 
-- Character authenticity and insight
-- Interesting and original
-- Writing quality
-- Coherence in plot, character choices, metaphor
-- Instruction following (followed the prompt)
-- World and atmosphere
-- Avoids cliches in characters, dialogue & plot
-- Avoids flowery verbosity & show-offy vocab maxxing
-- Avoids gratuitous metaphor or poetic overload
+- Karakterautenticitet og indsigt
+- Interessant og original
+- Skrivekvalitet
+- Sammenhæng i plot, karakters valg, metafor
+- Sproglig korrekthed og naturlighed
+- Instruktionsefterlevelse (fulgte prompten)
+- Verden og atmosfære
+- Undgår klicheer i karakterer, dialog og plot
+- Undgår blomstrende ordrigdom og prangende ordvalg
+- Undgår overdrevent metaforisk eller poetisk overlæsning
 
-Judging notes:
-- Be aware that these abilities may be independent, i.e. a model may be strong in one and weak in another.
-- Outputs will sometimes be truncated to ensure length consistency. Don't penalise this, just judge what is there on its merit.
-- You must always pick a winner for each criteria (no draws)
+Dommertips:
+- Vær opmærksom på, at disse evner kan være uafhængige – en model kan være stærk på ét område og svag på et andet.
+- Outputs bliver indimellem trunkeret for at holde længden ens. Straf ikke for det, vurder blot det, der er til stede.
+- Du skal altid vælge en vinder for hvert kriterium (ingen uafgjorte).
+- Vurder sproglig korrekthed/naturlighed på faktiske fejl og kluntet syntaks; bevidste stil-/dialektvalg skal ikke straffes.
+- Svar forventes på dansk; hvis et svar ikke er på dansk, skal det klart tabe på instruktionsefterlevelse og sproglig korrekthed/naturlighed.
+- Hvis dansk er uforståeligt eller stærkt fejlfyldt, kan øvrige kriterier ikke vurderes meningsfuldt; den tekst bør tabe alle kriterier.
+- Du kan ikke læse engelsk; hvis en tekst ikke er tydeligt dansk, er den uforståelig for dig og skal tabe alle kriterier (vælg den anden tekst som vinder med maksimal margin).
 
-The response will use a + / ++ / +++ / ++++ / +++++ format to denote the stronger response and relative ability difference for each criteria. Examples:
+Svaret skal bruge formatet + / ++ / +++ / ++++ / +++++ for at angive den stærkere tekst og forskellens størrelse for hvert kriterium. Eksempler:
 
 "character_authenticity_insight": "A0293++"
 "interesting_original": "A0618+++++"
@@ -37,7 +42,7 @@ The response will use a + / ++ / +++ / ++++ / +++++ format to denote the stronge
 "coherence": "A0582+++"
 "instruction_following": "A0138+"
 
-Respond in valid json without additional commentary (remembering to escape any string quotes), in this format:
+Svar i gyldig JSON uden ekstra kommentarer (husk at escape anførselstegn i strenge), i dette format:
 
 {
 "chain_of_thought_reasoning": "detailed chain of thought reasoning about the coming scoring decisions",
@@ -45,6 +50,7 @@ Respond in valid json without additional commentary (remembering to escape any s
 "interesting_original": "winner & disparity rating",
 "writing_quality": "winner & disparity rating",
 "coherence": "winner & disparity rating",
+"language_correctness_naturalness": "winner & disparity rating",
 "instruction_following": "winner & disparity rating",
 "world_and_atmosphere": "winner & disparity rating",
 "avoids_cliches": "winner & disparity rating",
